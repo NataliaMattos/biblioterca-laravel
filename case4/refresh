@@ -1,0 +1,22 @@
+Migrating: 2020_09_28_192154_create_table_autor_livro
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'autor_livros' already exists (SQL: create table `autor_livros` (`id` bigint unsigned not null auto_increment primary key, `livro_id` bigint unsigned null, `autor_id` bigint unsigned null, `autor_nome` bigint unsigned null, `livro_titulo` bigint unsigned null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at C:\Users\Nat\case4\vendor\laravel\framework\src\Illuminate\Database\Connection.php:671
+    667|         // If an exception occurs when attempting to run a query, we'll format the error
+    668|         // message to include the bindings with SQL, which will make this exception a
+    669|         // lot more helpful to the developer instead of just the database's errors.
+    670|         catch (Exception $e) {
+  > 671|             throw new QueryException(
+    672|                 $query, $this->prepareBindings($bindings), $e
+    673|             );
+    674|         }
+    675|
+
+  1   C:\Users\Nat\case4\vendor\laravel\framework\src\Illuminate\Database\Connection.php:464
+      PDOException::("SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'autor_livros' already exists")
+
+  2   C:\Users\Nat\case4\vendor\laravel\framework\src\Illuminate\Database\Connection.php:464
+      PDOStatement::execute()
